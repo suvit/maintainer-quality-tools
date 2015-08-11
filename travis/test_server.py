@@ -193,7 +193,7 @@ def setup_server(db, odoo_unittest, tested_addons, server_path,
     subprocess.check_call(["createdb", db])
     cmd_odoo = ["%s/openerp-server" % server_path,
                 "-d", db,
-                "--log-level=warn",
+                "--log-level=debug",
                 "--stop-after-init",
                 "--addons-path", addons_path,
                 "--init", ','.join(preinstall_modules),
